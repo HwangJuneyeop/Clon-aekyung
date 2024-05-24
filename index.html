@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애경산업</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/aekyung.css">
+    <link rel="stylesheet" href="css/m_aekyung.css">
+    
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/aekyung.js"></script>
+    <!-- <script src="js/aekyung.js"></script> -->
+    
+    <!-- swiper js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+    
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner_header">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html"><img src="img/header_logo_wh.png" alt="로고" class="logo_w"></a>
+                        <a href="index.html"><img src="img/header_logo_bk.png" alt="로고" class="logo_b"></a>
+                    </h1>
+                </div>
+                    <nav class="gnb_area">
+                        <ul class="gnb">
+                            <li>
+                                <a href="SUB_introduction.html" class="gnb_h">회사소개</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="sub_greetings.html">인사말</a></li>
+                                        <li><a href="sub_aboutAekyung.html">애경소개</a></li>
+                                        <li><a href="sub_design.html">디자인경영</a></li>
+                                        <li><a href="sub_development.html">연구개발</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="sub_brand.html" class="gnb_h">브랜드</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="sub_brand.html">뷰티</a></li>
+                                        <li><a href="sub_brand.html">퍼스널케어</a></li>
+                                        <li><a href="sub_brand.html">홈케어</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"class="gnb_h">미디어</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="sub_media.html">광고</a></li>
+                                        <li><a href="#">유튜브</a></li>
+                                        <li><a href="#">인스타그램</a></li>
+                                        <li><a href="#">네이버</a></li>
+                                        <li><a href="#">페이스북</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"class="gnb_h">지속가능경영</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="sub_environmental.html">Environmental</a></li>
+                                        <li><a href="#">Social</a></li>
+                                        <li><a href="#">Governance</a></li>
+                                        <li><a href="#">지속가능경영보고서</a></li>
+                                        <li><a href="#">윤리경영</a></li>
+                                        <li><a href="#">제보하기</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"class="gnb_h">투자정보</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="#">IR 자료실</a></li>
+                                        <li><a href="#">재무정보</a></li>
+                                        <li><a href="#">공시정보</a></li>
+                                        <li><a href="#">전자공고</a></li>
+                                        <li><a href="#">지배구조</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="sub_respond.html"class="gnb_h">고객만족팀</a>
+                                <div class="sub_area">
+                                    <ul class="sub">
+                                        <li><a href="sub_inquiry.html">1:1 문의</a></li>
+                                        <li><a href="#">아이디어제안</a></li>
+                                        <li><a href="#">고객가치증진</a></li>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">정보 TIP</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header_right">
+                        <a href="#"><img src="img/hd_search_icon.png" alt="검색" class="btn_w"></a>
+                        <a href="#"><img src="img/hd_search_black.png" alt="검색" class="btn_b"></a>
+                        <a href="#"><img src="img/bars-solid.svg" alt="메뉴" class="btn_menu"></a>
+                        <a href="#" class="m_menu"><i class="fa-solid fa-bars"></i></a>
+                        <a href="#"><img src="img/sh_close_btn.png" alt="닫기" class="btn_close"></a>
+                        <div class="btn_kr">
+                           <p class="kr_box">KOR</p>
+                            <ul>
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHN</a></li>
+                                <li><a href="#">JPN</a></li>
+                                <li><a href="#">VTN</a></li>
+                                <li><a href="#">RUS</a></li>
+                                <li><a href="#">SPN</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn_fs">
+                            <p class="fs_box">FAMIL SITE</p>
+                            <ul>
+                                <li><a href="#">AK lover</a></li>
+                                <li><a href="#">ONE THING</a></li>
+                                <li><a href="#">에이솔루션 공식스토어</a></li>
+                                <li><a href="#">루나 직영몰</a></li>
+                                <li><a href="#">애경 본사 직영몰</a></li>
+                                <li><a href="#">AGE20'S플래그십몰</a></li>
+                                <li><a href="#">에이솔루션 플래그십몰</a></li>
+                                <li><a href="#">point& 뷰티 윈도</a></li>
+                                <li><a href="#">애경 S.T.</a></li>
+                                <li><a href="#">인재채용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchArea">
+                    <div class="searchInner">
+                        <div class="search">
+                            <input type="search" placeholder="검색어를 입력하세요.">
+                            <button><span class="blind">clear</span></button>
+                        </div>
+                    </div>
+                </div>
+            <!-- 모바일 -->
+            <m_header>
+                <nav class="m_gnbArea">
+                    <div class="top">
+                        <div class="m_btn_kr">
+                            <a href="#" class="m_kr_box">KOR</a>
+                            <ul>
+                                <li><a href="#">ENG</a></li>
+                                <li><a href="#">CHN</a></li>
+                                <li><a href="#">JPN</a></li>
+                                <li><a href="#">VTN</a></li>
+                                <li><a href="#">RUS</a></li>
+                                <li><a href="#">SPN</a></li>
+                            </ul>
+                        </div>
+                        <img src="img/hd_search_black.png" alt="" class="m_serch">
+                        <img src="img/sh_close_btn.png" alt="" class="m_close">
+                    </div>
+                    <ul class="m_gnb">
+                        <li class="acc-que">
+                            <a href="SUB_introduction.html">회사소개</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottm"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="sub_greetings.html">인사말</a></li>
+                            <li><a href="sub_aboutAekyung.html">애경소개</a></li>
+                            <li><a href="sub_design.html">디자인경영</a></li>
+                            <li><a href="sub_development.html">연구개발</a></li>
+                        </ul>
+                        <li class="acc-que">
+                            <a href="sub_brand.html">브랜드</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottm"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="sub_brand.html">뷰티</a></li>
+                            <li><a href="sub_brand.html">퍼스널케어</a></li>
+                            <li><a href="sub_brand.html">홈케어</a></li>
+                        </ul>
+                        <li class="acc-que">
+                            <a href="#">미디어</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottm"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="sub_media.html">광고</a></li>
+                            <li><a href="#">유튜브</a></li>
+                            <li><a href="#">인스타그램</a></li>
+                            <li><a href="#">네이버</a></li>
+                            <li><a href="#">페이스북</a></li>
+                            <li><a href="#">뉴스</a></li>
+                        </ul>
+                        <li class="acc-que">
+                            <a href="#">지속가능경영</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottm"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="sub_environmental.html">Environmental</a></li>
+                            <li><a href="#">Social</a></li>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">지속가능경영보고서</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">제보하기</a></li>
+                        </ul>
+                        <li class="acc-que">
+                            <a href="#">투자정보</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottm"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="#">IR자료실</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">공시정보</a></li>
+                            <li><a href="#">전자공고</a></li>
+                            <li><a href="#">지배구조</a></li>
+                        </ul>
+                        <li class="acc-que">
+                            <a href="sub_respond.html">고객만족팀</a>
+                            <div class="arrow-wrap">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottom"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </li>
+                        <ul class="acc-ans">
+                            <li><a href="sub_inquiry.html">1:1문의</a></li>
+                            <li><a href="#">아이디어제안</a></li>
+                            <li><a href="#">고객가치증진</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">정보 TIP</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </m_header>
+        </header>
+        <div class="bgGnb"></div>
+        <div class="main_bg">
+            <div class="main_slide">
+                <div class="bg bg1"></div>
+                <div class="bg bg2"></div>
+                <div class="bg bg3"></div>
+            </div>                
+        </div>
+        <a href="#top" class="btntop"></a>
+        <div class="content">
+            <div class="inner">
+                <div class="cont_header">
+                    <h2>SUSTAINABLE<br>
+                        LOVE & RESPECT
+                    </h2>
+                    <ul>
+                        <li>
+                            <button onclick="showCont('환경')">
+                                <span>Environmental</span>
+                                <p class="cont_text01">환경</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="showCont('사회')">
+                                <span>Social</span>
+                                <p class="cont_text02">사회</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="showCont('지배구조')">
+                                <span>Governance</span>
+                                <p class="cont_text03">지배구조</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cont_box01 active">
+                    <div class="cont_box">
+                        <div class="box_left">
+                            <h3>
+                                애경산업은 지속가능한 환경을 위해 <br>
+                                책입을다하겠습니다.
+                            </h3>
+                            <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                        </div>
+                        <div class="box_right">
+                            <img src="img/banner.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_box02">
+                    <div class="cont_box">
+                        <div class="box_left">
+                            <h3>
+                                애경산업의 노력은<br>
+                                임직원과 협력사, 지역사회<br>
+                                그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+                            </h3>
+                            <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                        </div>
+                        <div class="box_right">
+                            <img src="img/banner02.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_box03">
+                    <div class="cont_box">
+                        <div class="box_left">
+                            <h3>
+                                투명하고 건전한 기업 활동을 이어나가겠습니다.
+                            </h3>
+                            <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                        </div>
+                        <div class="box_right">
+                            <img src="img/banner03.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 모바일 컨텐츠 -->
+        <div class="m_content">
+            <div class="inner">
+                <div class="cont_header">
+                    <h2>SUSTAINABLE<br>
+                        LOVE & RESPECT
+                    </h2>
+                </div>
+                <div class="accordion-cont">
+                    <div class="acc-cue">
+                        <span class="cont_htext">Environmental</span>
+                        <p class="cont_text01">환경</p>
+                        <div class="arrow-cont">
+                            <div class="arrow-cont">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottom"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="acc-cns">
+                        <img src="img/banner.png" alt="" class="banner">
+                        <h3>
+                            애경산업은 지속가능한 환경을 위해 <br>
+                            책입을다하겠습니다.
+                        </h3>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                    </div>
+                    <div class="acc-cue">
+                        <span class="cont_htext">Social</span>
+                        <p class="cont_text01">사회</p>
+                        <div class="arrow-cont">
+                            <div class="arrow-cont">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottom"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="acc-cns">
+                        <img src="img/banner02.png" alt="" class="banner">
+                        <h3>
+                            애경산업의 노력은<br>
+                            임직원과 협력사, 지역사회<br>
+                            그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+                        </h3>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                    </div>
+                    <div class="acc-cue">
+                        <span class="cont_htext">Governance</span>
+                        <p class="cont_text01">지배구조</p>
+                        <div class="arrow-cont">
+                            <div class="arrow-cont">
+                                <span class="arrow-top"><img src="img/arrow_up.svg" alt="펼치기"></span>
+                                <span class="arrow-bottom"><img src="img/arrow_down.svg" alt="접기"></span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="acc-cns">
+                        <img src="img/banner03.png" alt="" class="banner">
+                        <h3>
+                            투명하고 건전한 기업 활동을 이어나가겠습니다.
+                        </h3>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+        <section class="item">
+            <div class="inner">
+                <div class="item_box">
+                    <div class="item_left">
+                        <h2>Beauty</h2>
+                        <span>뷰티</span>
+                        <p>
+                            아름다움의 무한한 가능성을 품은<br>
+                            당신을 위한 뷰티풀 모먼트
+                        </p>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="img/Beauty01.jpg" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Beauty02.jpg" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Beauty03.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Beauty04.jpg" alt="이미지 4" class="sl_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="item_box">
+                    <div class="item_left">
+                        <h2>Personal Care</h2>
+                        <span>퍼스널 케어</span>
+                        <p>
+                            당신의 일상에 건강하고 향기로운 아름다움을<br>
+                            선사합니다.
+                        </p>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt=""class="arrow_img"></a>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="img/perc1.jpg" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/perc2.jpg" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/perc3.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/perc4.jpg" alt="이미지 4" class="sl_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="item_box">
+                    <div class="item_left">
+                        <h2>Home Care</h2>
+                        <span>홈 케어</span>
+                        <p>
+                            나의 일상 생활을 깨끗하게 편리하게 가치있게
+                        </p>
+                        <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="img/lc1.png" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/lc2.png" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/lc3.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/lc4.png" alt="이미지 4" class="sl_img">
+                        </div>
+                        <div class="slide">
+                            <img src="img/lc5.jpg" alt="이미지 5" class="sl_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 모바일 아이템 -->
+        <section class="m_item">
+            <div class="inner">
+                <div class="m_item_box">
+                    <div class="m_item_left">
+                        <h2>Beauty</h2>
+                        <span>뷰티</span>
+                        <p>
+                            아름다움의 무한한 가능성을 품은<br>
+                            당신을 위한 뷰티풀 모먼트
+                        </p>
+                    </div>
+                    <div class="m_slider">
+                        <div class="m_slide">
+                            <img src="img/Beauty01.jpg" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/Beauty02.jpg" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/Beauty03.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/Beauty04.jpg" alt="이미지 4" class="sl_img">
+                        </div>
+                    </div>
+                    <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                </div>
+                <div class="m_item_box">
+                    <div class="m_item_left">
+                        <h2>Personal Care</h2>
+                        <span>퍼스널 케어</span>
+                        <p>
+                            당신의 일상에 건강하고 향기로운 아름다움을<br>
+                            선사합니다.
+                        </p>
+                    </div>
+                    <div class="m_slider">
+                        <div class="m_slide">
+                            <img src="img/perc1.jpg" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/perc2.jpg" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/perc3.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/perc4.jpg" alt="이미지 4" class="sl_img">
+                        </div>
+                    </div>
+                    <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                </div>
+                <div class="m_item_box">
+                    <div class="m_item_left">
+                        <h2>Home Care</h2>
+                        <span>홈 케어</span>
+                        <p>
+                            나의 일상 생활을 깨끗하게 편리하게 가치있게
+                        </p>
+                    </div>
+                    <div class="m_slider">
+                        <div class="m_slide">
+                            <img src="img/lc1.png" alt="이미지 1" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/lc2.png" alt="이미지 2" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/lc3.jpg" alt="이미지 3" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/lc4.png" alt="이미지 4" class="sl_img">
+                        </div>
+                        <div class="m_slide">
+                            <img src="img/lc5.jpg" alt="이미지 5" class="sl_img">
+                        </div>
+                    </div>
+                    <a href="#" class="view">바로가기<img src="img/arrow_link.webp" alt="" class="arrow_img"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 이벤트 -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="event_box">
+                        <div class="event inner">
+                            <img src="img/news_txt.png" alt="" class="news_img">
+                            <div class="event_img">
+                                <img src="img/s02.jpg" alt="">
+                            </div>
+                            <div class="top_text">
+                                <span>신제품</span>
+                                <h3>루나 블러 커버 쿠션</h3>
+                                <h4>모공과 요철을 자연스럽게 메꿔 매끈한 피부결을 연출해 주는 쿠션</h4>
+                                <p>
+                                    생활뷰티기업 애경산업의 메이크업 전문 브랜드 '루나'(LUNA)에서 피부 결점을 꼼꼼하게 커버해 꺠끗한
+                                    피부를 연출해 주는 '블러 커버 쿠션'(LUNA BLUR COVER CUSHION)를 출시했다. 루나 블러 커버 쿠션은 기미, 주근깨, 트러블 흔적 등 피부 결점을 커버해 깨끗한 피부를 완성해 주는 제품이다.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="event_box">
+                        <div class="event inner">
+                            <img src="img/news_txt.png" alt="" class="news_img">
+                            <div class="event_img">
+                                <img src="img/s01.jpg" alt="">
+                            </div>
+                            <div class="top_text">
+                                <span>신제품</span>
+                                <h3>리큐 빨래와 세탁조 더블케어</h3>
+                                <h4>빨래와 세탁조 케어를 한 번에 도와주는 세탁세제</h4>
+                                <p>
+                                    생활뷰티기업 애경산업의 스마트 액체세제 브랜드 '리큐(LiQ)'에서 빨래와 세탁조 케어를 한 번에
+                                    도와주는 '빨래와 세탁조 더블케어'를 출시했다.리큐 빨래와 세탁조 더블케어는 세탁을 하는 동안 빨래의
+                                    오염 제거는 물론 세탁조 케어까지 한 번에 도와주는 세탁세제이다.특히 물 때 등으로 인해 주기적인 관리가 필요한 세탁조를 간편하게 관리할 수 있어 사용의 편의성을 더했다.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        
+         <!-- footer -->
+         <footer>
+            <div class="ft_box">
+                <div class="ft_top">
+                    <a href="#"><img src="img/footer_logo2.png" alt=""></a>
+                 </div>
+                 <div class="ft_mid">
+                    <div class="ft_text">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">고객만족팀 080-024-1357</a>
+                    </div>
+                    <div class="ft_img">
+                        <a href="#"><img src="img/ft_youtube.png" alt=""></a>
+                        <a href="#"><img src="img/ft_facebook.png" alt=""></a>
+                        <a href="#"><img src="img/ft_insta.png" alt=""></a>
+                        <a href="#"><img src="img/ft_naver.png" alt=""></a>
+                        <a href="#"><img src="img/ft_txt.png" alt=""></a>
+                    </div>
+                 </div>
+                 <div class="ft_bot">
+                    <p>애경산업(주) 서울시 마포구 양화로 188 COPYRIGHT© 2023 Aekyung Industrial Co., Ltd. ALL RIGHT RESERVED</p>
+                 </div>
+            </div>
+              <!-- 모바일 푸터 -->
+              <div class="m_ft_box">
+                <div class="ft_top">
+                    <a href="#"><img src="img/footer_logo2.png" alt=""></a>
+                </div>
+                <div class="ft_bot">
+                    <p>애경산업(주) 서울시 마포구 양화로 188</p>
+                </div>
+                <div class="m_btn_fs">
+                    <a href="javascript:void(0);" class="fs_box">FAMIL SITE</a>
+                    <ul>
+                        <li><a href="#">AK lover</a></li>
+                        <li><a href="#">ONE THING</a></li>
+                        <li><a href="#">에이솔루션 공식스토어</a></li>
+                        <li><a href="#">루나 직영몰</a></li>
+                        <li><a href="#">애경 본사 직영몰</a></li>
+                        <li><a href="#">AGE20'S플래그십몰</a></li>
+                        <li><a href="#">에이솔루션 플래그십몰</a></li>
+                        <li><a href="#">point& 뷰티 윈도</a></li>
+                        <li><a href="#">애경 S.T.</a></li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                </div>
+                <div class="ft_mid">
+                    <div class="ft_text">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">고객만족팀 080-024-1357</a>
+                    </div>
+                    <div class="ft_img">
+                        <a href="#"><img src="img/mo_ft_youtube.png" alt=""></a>
+                        <a href="#"><img src="img/mo_ft_facebook.png" alt=""></a>
+                        <a href="#"><img src="img/mo_ft_insta.png" alt=""></a>
+                        <a href="#"><img src="img/mo_ft_naver.png" alt=""></a>
+                        <a href="#"><img src="img/mo_ft_txt.png" alt="" class="img_txt"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    effect : 'fade', 
+    fadeEffect: { crossFade: true },
+    
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    }
+    });
+    $('.main_slide').slick({
+        dots: false, //indicator (true = 보이기 / false = 숨김)
+        infinite: true, //무한반복 실행
+        speed: 400, 
+        fade: true, // 서서히 나타나고 사라지는 효과
+        cssEase: 'linear',
+        autoplay: true,
+        autoplayspeed: 2000,
+        preArrow: false, // 이전버튼 숨기기
+        nextArrow: false, // 다음버튼 숨기기
+    });
+    
+    $('.slider').slick({
+        infinite: false,
+        slidesToShow: 3.5,
+        slidesToScroll: 2
+    });
+    $('.m_slider').slick({
+        infinite: false,
+        slidesToShow: 1.5,
+        slidesToScroll: 2,
+        preArrow: false, // 이전버튼 숨기기
+        nextArrow: false, // 다음버튼 숨기기
+    });
+</script>
+</body>
+</html>

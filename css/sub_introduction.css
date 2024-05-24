@@ -1,0 +1,129 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(all.min.css);
+body {
+    color: #161616;
+    font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
+}
+
+/* main_bg */
+.main_bg {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 100px;
+    background:#FFF;
+    position: relative;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 6%; left:10%;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 14px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -2.76px;
+    color:#000;
+    margin-bottom: 10px;
+    line-height: 1.29
+}
+
+/* about_banner */
+.m_about_banner{
+    display: none;
+}
+.about_banner {
+    background: url(../img/about_banner.png) no-repeat center/cover;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.about_banner h3 {
+    font-size: 32px;
+    color:#fff;
+    text-align: center;
+    line-height: 1.53;
+}
+.cont_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.cont{
+    position: relative;
+    width: 33%;
+    margin-bottom: 30px;
+}
+.cont img {
+    width:100%
+}
+.cont_text{
+    position: absolute;
+    bottom:13%; left:5%;
+    line-height: 1.56;
+}
+.cont_text p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.cont_text span{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* search */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 70px;
+    display: none;
+}
+.searchArea.on {
+    display: flex;
+}
+.searchInner .search {position: relative; width: 60%; margin: 0 auto; text-align: center;}
+.searchInner .search input {
+    width: 60%;
+    height: 56px; 
+    line-height: 56px;
+    padding-left: 10px;
+    border:none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    margin-top:8%;
+}
+.searchInner .search button {
+    position: absolute;
+    top: 110px; right: 230px;
+    width: 32px; height: 32px;
+    background: url(../img/hd_search_black.png) no-repeat center;
+    border: none;
+}
+.searchInner .search input:focus {outline: none;}
+.grayBox {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+    z-index: 2;
+    display: none;
+    height: 280vh;
+}

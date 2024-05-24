@@ -1,0 +1,173 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(all.min.css);
+body {
+    color: #161616;
+    font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
+}
+
+/* main_bg */
+.main_bg {
+    width: 100%;
+    height: 45vh;
+    background:#FFF;
+    position: relative;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 12%; left:0;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 14px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2.76px;
+    color:#000;
+    margin-bottom: 10px;
+    line-height: 1.29
+}
+
+/* main_link */
+.main_link > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main_link > ul > li {
+    margin-right: 10px;
+}
+.main_link > ul > li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+.main_link > ul > li.on a {
+    background-color: #000;
+    color:#fff;
+}
+.main_link > ul > li a {
+    display: block;
+    width: 90px;
+    padding: 0 2rem;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.108rem;
+    border-radius: 2.4rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    transition: all .4s;
+}
+
+/* sub_link */
+.CEO, .vice_chairman, .Group_Chairman{
+    display: none;
+}
+
+.CEO.active {
+    display: block;
+}
+.sub_link ul >li.on button{
+    color:#000;
+}
+.sub_link > ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 70px;
+}
+.sub_link > ul > li {
+    margin-right: 25px;
+}
+.sub_link > ul > li:hover button {
+    color:#000;
+}
+
+.sub_link > ul > li button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.4);
+}
+/* content */
+.content{
+    display: flex;
+    padding: 50px;
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+.content_img {
+    width: 45%;
+}
+
+.content_img img {
+    width: 350px;
+    height: 450px;
+}
+
+.content_text > h2{
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.content_text p {
+    color:#000;
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: -0.96px;
+}
+.sign {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+}
+.sign > p{
+    font-size: 16px;
+    font-weight: 500;
+} 
+.sign img {
+    width: 100px;
+    margin-left: 10px;
+}
+/* search */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 70px;
+    display: none;
+}
+.searchArea.on {
+    display: flex;
+}
+.searchInner .search {position: relative; width: 60%; margin: 0 auto; text-align: center;}
+.searchInner .search input {
+    width: 60%;
+    height: 56px; 
+    line-height: 56px;
+    padding-left: 10px;
+    border:none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    margin-top:8%;
+}
+.searchInner .search button {
+    position: absolute;
+    top: 110px; right: 230px;
+    width: 32px; height: 32px;
+    background: url(../img/hd_search_black.png) no-repeat center;
+    border: none;
+}
+.searchInner .search input:focus {outline: none;}

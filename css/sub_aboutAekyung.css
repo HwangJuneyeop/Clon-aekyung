@@ -1,0 +1,431 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(all.min.css);
+body {
+    color: #161616;
+    font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
+}
+
+/* main_bg */
+.main_bg {
+    width: 100%;
+    height: 30vh;
+    background:#FFF;
+    position: relative;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 12%; left:0;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 14px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2.76px;
+    color:#000;
+    margin-bottom: 10px;
+    line-height: 1.29
+}
+
+/* main_link */
+.main_link {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.main_link > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main_link > ul > li {
+    margin-right: 10px;
+}
+.main_link > ul > li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+.main_link > ul > li.on a {
+    background-color: #000;
+    color:#fff;
+}
+.main_link > ul > li a {
+    display: block;
+    width: 90px;
+    padding: 0 2rem;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.108rem;
+    border-radius: 2.4rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    transition: all .4s;
+}
+
+/* content */
+.content {
+    text-align: center;
+    background: #f8f8f8;
+    height: 80vh;
+    padding:60px 60px;
+    margin-top: 50px;
+}
+.content > h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color:#000;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    word-break: keep-all;
+    margin-bottom: 15px;
+}
+.content span {
+    font-weight: 500;
+    letter-spacing: -1.08px;
+    word-break: keep-all;
+    color:#000;
+}
+.cont_Area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.cont_box {
+    background: #fff;
+    border:0;
+    border-radius: 5px;
+    width:29%;
+    height: 55vh;
+    margin-right: 20px;
+}
+.cont_box img {
+    margin-top: 25%;
+}
+.cont_box h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.cont_box p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.content02 {
+    text-align: center;
+    height: 80vh;
+    padding:60px 60px;
+    margin-top: 50px;
+}
+.content02 > h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color:#000;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    word-break: keep-all;
+    margin-bottom: 15px;
+}
+.content02 span {
+    font-weight: 500;
+    letter-spacing: -1.08px;
+    word-break: keep-all;
+    color:#000;
+}
+.content02 img {
+    width: 30%;
+    margin-right: 15px;
+    margin-top: 50px;
+}
+
+
+.employment{
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #fadbdb, #f6e8f2);
+    border-radius: 5px;
+    width:93%;
+    height: 100px;
+    margin-left: 3%;
+    margin-bottom: 10%;
+}
+.employment span {
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    width:120px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50px;
+    margin-left: 5%;
+}
+.employment p {
+    margin-left: 2%;
+    color:#000;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.employment a {
+    position: relative;
+    margin-left:28%;
+    font-weight: 500;
+    color:#000;
+}
+.employment a img{
+    margin-left: 5px;
+}
+.employment a::after{
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: #000;
+    transition: all 0.3s;
+    margin-bottom:-5px;
+}
+.employment a:hover:after{
+    width: 100%;
+}
+.m_arrow {
+    display: none;
+}
+/* search */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 70px;
+    display: none;
+}
+.searchArea.on {
+    display: flex;
+}
+.searchInner .search {position: relative; width: 60%; margin: 0 auto; text-align: center;}
+.searchInner .search input {
+    width: 60%;
+    height: 56px; 
+    line-height: 56px;
+    padding-left: 10px;
+    border:none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    margin-top:8%;
+}
+.searchInner .search button {
+    position: absolute;
+    top: 110px; right: 230px;
+    width: 32px; height: 32px;
+    background: url(../img/hd_search_black.png) no-repeat center;
+    border: none;
+}
+.searchInner .search input:focus {outline: none;}
+.grayBox {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+    z-index: 2;
+    display: none;
+}
+
+
+/* 모바일 */
+@media screen and (max-width: 431px) {
+    /* main_bg */
+.main_bg {
+    height: 20vh;
+    margin-bottom: 10px;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 3%; left:3%;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 12px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+/* main_link */
+.main_link {
+    margin-bottom: 60px;
+}
+.main_link > ul{
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.main_link > ul > li {
+    margin-right: 10px;
+}
+.main_link > ul > li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+.main_link > ul > li.on a {
+    background-color: #000;
+    color:#fff;
+}
+.main_link > ul > li a {
+    display: block;
+    width: 49px;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+
+/* content */
+.content {
+    height: 100vh;
+    padding:60px 0;
+    margin-top: 0;
+}
+.content > h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.content span {
+    font-size: 15px;
+    font-weight: 500;
+}
+.cont_Area {
+    display: block;
+    margin-top: 50px;
+}
+.cont_box {
+    border-radius: 5px;
+    width:100%;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.cont_box img {
+    margin-top: 5%;
+}
+.cont_box h3 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.cont_box p {
+    font-size: 13px;
+    line-height: 1.3;
+}
+.content02 {
+    text-align: center;
+    height: 100%;
+    padding:0 10px;
+    margin-top: 30px;
+    
+}
+.content02 > h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.content02 span {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color:#000;
+}
+.content02 img {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px;
+}
+.employment{
+    position: relative;
+    display: block;
+    width:95%;
+    height: 150px;
+    margin: 50px auto 10%;
+}
+.employment span {
+    position: absolute;
+    top:50px; left:0;
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    width:100px;
+    height: 30px;
+    line-height: 30px;
+}
+.employment p {
+    position: absolute;
+    bottom: 20px; left:10px;
+    width:75%;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.employment a {
+    display: none;
+    position: relative;
+    margin-left:28%;
+    font-weight: 500;
+    color:#000;
+}
+.m_arrow_box {
+    position: absolute;
+    top: 10px; right:20px;
+    background: #fff;
+    border-radius: 50px;
+    width:30px;
+    height: 30px;
+}
+.m_arrow {
+    display: block;
+    position: absolute;
+    top:10px; right: 10px;
+}
+/* search */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 70px;
+    display: none;
+}
+.searchInner .search {width: 85%;}
+.searchInner .search input {
+    width: 100%;
+    height: 56px; 
+    line-height: 56px;
+    border-bottom: 2px solid #000;
+    font-size: 14px;
+    margin-top: 70px;
+}
+.searchInner .search button {
+    position: absolute;
+    top: 80px; right: 0;
+    width: 32px; height: 32px;
+    background: url(../img/hd_search_black.png) no-repeat center;
+    border: none;
+}
+.searchInner .search input:focus {outline: none;}
+}

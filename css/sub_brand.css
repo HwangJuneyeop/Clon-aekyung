@@ -1,0 +1,368 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(all.min.css);
+body {
+    color: #161616;
+    font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
+}
+
+/* main_bg */
+.main_bg {
+    width: 100%;
+    height: 40vh;
+    background:#FFF;
+    position: relative;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 12%; left:0;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 14px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2.76px;
+    color:#000;
+    margin-bottom: 10px;
+    line-height: 1.29
+}
+
+/* main_link */
+.main_link > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main_link > ul > li {
+    margin-right: 10px;
+}
+.main_link > ul > li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+.main_link > ul > li.on a {
+    background-color: #000;
+    color:#fff;
+}
+.main_link > ul > li a {
+    display: block;
+    width: 90px;
+    padding: 0 2rem;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.108rem;
+    border-radius: 2.4rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    transition: all .4s;
+}
+ .personal, .fabric{
+    display: none;
+}
+
+.content{
+    margin: 80px 0 150px 0;
+}
+.content_text {
+    display: flex;
+    align-items: center;
+}
+.content h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+}
+.content p {
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 20px;
+}
+.content_box {
+    display: flex;
+    justify-content: space-between;
+}
+.cosmetics .content_img01 figure {
+    background:url(../img/brand_logo01.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.cosmetics .content_img01 figure:hover {
+    background: url(../img/brand01.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.cosmetics .content_img02 figure {
+    background:url(../img/brand_logo02.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.cosmetics .content_img02 figure:hover {
+    background: url(../img/brand02.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.cosmetics .content_img03 figure {
+    background:url(../img/brand_logo03.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.cosmetics .content_img03 figure:hover {
+    background: url(../img/brand03.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.cosmetics .content_img04 figure {
+    background:url(../img/brand_logo04.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.cosmetics .content_img04 figure:hover {
+    background: url(../img/brand04.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.cosmetics .content_img05 figure {
+    background:url(../img/brand_logo05.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.cosmetics .content_img05 figure:hover {
+    background: url(../img/brand05.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.content_box p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+
+.personal .content_img01 figure {
+    background:url(../img/personalbanner01.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.personal .content_img01 figure:hover {
+    background: url(../img/personal01.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.personal .content_img02 figure {
+    background:url(../img/personalbanner02.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.personal .content_img02 figure:hover {
+    background: url(../img/personal02.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.personal .content_img03 figure {
+    background:url(../img/personalbanner03.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.personal .content_img03 figure:hover {
+    background: url(../img/personal03.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.personal .content_img04 figure {
+    background:url(../img/personalbanner04.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.personal .content_img04 figure:hover {
+    background: url(../img/personal04.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.personal .content_img05 figure {
+    background:url(../img/personalbanner05.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.personal .content_img05 figure:hover {
+    background: url(../img/personal05.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.fabric .content_img01 figure {
+    background:url(../img/homebanner01.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.fabric .content_img01 figure:hover {
+    background: url(../img/home01.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.fabric .content_img02 figure {
+    background:url(../img/homebanner02.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.fabric .content_img02 figure:hover {
+    background: url(../img/home02.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.fabric .content_img03 figure {
+    background:url(../img/homebanner03.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.fabric .content_img03 figure:hover {
+    background: url(../img/home03.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.fabric .content_img04 figure {
+    background:url(../img/homebanner04.jpg)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.fabric .content_img04 figure:hover {
+    background: url(../img/home04.png)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.fabric .content_img05 figure {
+    background:url(../img/homebanner05.png)no-repeat center/cover;
+    width:250px;
+    height: 250px;
+}
+.fabric .content_img05 figure:hover {
+    background: url(../img/home05.jpg)no-repeat center/cover;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/* search */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 70px;
+    display: none;
+}
+.searchArea.on {
+    display: flex;
+}
+.searchInner .search {position: relative; width: 60%; margin: 0 auto; text-align: center;}
+.searchInner .search input {
+    width: 60%;
+    height: 56px; 
+    line-height: 56px;
+    padding-left: 10px;
+    border:none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    margin-top:8%;
+}
+.searchInner .search button {
+    position: absolute;
+    top: 110px; right: 230px;
+    width: 32px; height: 32px;
+    background: url(../img/hd_search_black.png) no-repeat center;
+    border: none;
+}
+.searchInner .search input:focus {outline: none;}
+
+
+@media screen and (max-width:431px) {
+/* main_bg */
+.main_bg {
+    height: 30vh;
+    margin-bottom: 10px;
+}
+.main_bg .main_text {
+    position: absolute;
+    bottom: 3%; left:3%;
+}
+.location_con {
+    margin-bottom: 30px;
+}
+.location_con a {
+    font-size: 12px;
+    color: rgb(0,0,0,0.5);
+}
+h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+/* main_link */
+.main_link {
+    margin-bottom: 60px;
+}
+.main_link > ul{
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.main_link > ul > li {
+    margin-right: 10px;
+}
+.main_link > ul > li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+.main_link > ul > li.on a {
+    background-color: #000;
+    color:#fff;
+}
+.main_link > ul > li a {
+    display: block;
+    width: 49px;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+}
