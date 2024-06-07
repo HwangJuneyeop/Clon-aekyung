@@ -108,6 +108,7 @@ h2 {
     text-align: center;
     display: none;
     margin-top: 15%;
+    word-break: keep-all;
 }
 .sub > li {
     margin-bottom: 15px;
@@ -207,9 +208,7 @@ h2 {
     font-size: 14px;
     cursor: pointer;
 }
-/* .btn_fs:hover ul {
-    display: block;
-} */
+
 /* 고정헤더 */
 header.on {
     position: fixed;
@@ -469,21 +468,4 @@ footer {
 }
 .searchInner .search input:focus {outline: none;}
 
-/* .btntop{
-    position: fixed;
-    bottom:55px; right:40px;
-    width:3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    font-size: 20px;
-    color:#fff;
-    background-image:url(../img/icon_scroll_btn_bot.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30%;
-    text-align: center;
-    line-height: 40px;
-}
- */
 

@@ -1,58 +1,41 @@
-$(function () {
-    var scrollThreshold = 200; // 스크롤 이벤트가 활성화되는 스크롤 위치
+    $(function () {
+        var scrollThreshold = 200;
     
-    $('.gnb_area').on('mouseover focusin', function () {
-        $(".gnb_area").css("transition","all 0.7s");
-        $(".gnb_area").css("width","900px");
-        $(".logo_w").css("display", "none");
-        $(".logo_b").css("display", "block");
-        $(".gnb_h").css("color", "black");
-        $("header").css("backgroundColor", "white");
-        $(".btn_w").css("display","none");
-        $(".btn_b").css("display","block");
-        $(".kr_box").css("color","black");
-        $(".btn_kr").css("border-color","black");
-        
-        $('.bgGnb').stop().fadeIn(100);
-        $('.gnb_area .sub').stop().fadeIn(100);
-    });
+        $('.gnb_area').on('mouseover focusin', function () {
+            $(this).css("transition","all 0.7s");
+            $(this).css("width","900px");
+            $(this).css("height","70px");
+            $(".logo_w").css("display", "none");
+            $(".logo_b").css("display", "block");
+            $(".gnb_h").css("color", "black");
+            $("header").css("backgroundColor", "white");
+            $(".btn_w").css("display","none");
+            $(".btn_b").css("display","block");
+            $(".kr_box").css("color","black");
+            $(".btn_kr").css("border-color","black");
     
-    $('.bgGnb').on('mouseleave', function () {
+            $('.bgGnb').stop().fadeIn(100);
+            $('.gnb_area .sub').stop().fadeIn(100);
+        });
     
-        $(this).stop().fadeOut(100);
-        $('.gnb_area .sub').stop().fadeOut(100);
-        $(".gnb_area").css("transition","all 0.7s");
-        $(".gnb_area").css("width","700px");
-        $(".logo_w").css("display", "block");
-        $(".logo_b").css("display", "none");
-        $("header").css("backgroundColor", "");
-        $(".gnb_h").css("color", "white");
-        $(".btn_w").css("display","block");
-        $(".btn_b").css("display","none");
-        $(".kr_box").css("color","white");
-        $(".btn_kr").css("border-color","white");
-    if ($(window).scrollTop() >= scrollThreshold) {
-        $(".logo_w").css("display", "none");
-        $(".logo_b").css("display", "block");
-        $(".gnb_h").css("color", "black");
-        $("header").css("backgroundColor", "white");
-        $(".btn_w").css("display","none");
-        $(".btn_b").css("display","block");
-        $(".kr_box").css("color","black");
-        $(".btn_kr").css("border-color","black");
-        $(".gnb").css("color", "black");
-        }
-    });
-    $('header').each(function () {
-        const $win = $(window),
-            $header = $(this);
-        let headerOffsetTop = $header.offset().top;
+        // mouseleave 이벤트 핸들러 수정
+        $('.gnb_area').on('mouseleave', function () {
+            $('.bgGnb').stop().fadeOut(100, function() {
+                $('.gnb_area .sub').stop().fadeOut(100);
+            });
+            $(this).css("transition","all 0.7s");
+            $(this).css("width","700px");
+            $(".gnb_area").css("height","10px")
+            $(".logo_w").css("display", "block");
+            $(".logo_b").css("display", "none");
+            $("header").css("backgroundColor", "");
+            $(".gnb_h").css("color", "white");
+            $(".btn_w").css("display","block");
+            $(".btn_b").css("display","none");
+            $(".kr_box").css("color","white");
+            $(".btn_kr").css("border-color","white");
     
-        $win.on('scroll', function () {
-            let scrollTop = $win.scrollTop();
-    
-            if (scrollTop > headerOffsetTop) {
-                $header.addClass('on')
+            if ($(window).scrollTop() >= scrollThreshold) {
                 $(".logo_w").css("display", "none");
                 $(".logo_b").css("display", "block");
                 $(".gnb_h").css("color", "black");
@@ -60,28 +43,47 @@ $(function () {
                 $(".btn_w").css("display","none");
                 $(".btn_b").css("display","block");
                 $(".kr_box").css("color","black");
+                $(".btn_kr").css("border-color","black");
+                $(".gnb").css("color", "black");
+            }
+        });
+    
+        $(window).on('scroll', function () {
+            var $header = $('header');
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop >= scrollThreshold) {
+                $header.addClass('on');
+                $(".logo_w").css("display", "none");
+                $(".logo_b").css("display", "block");
+                $(".gnb_h").css("color", "black");
+                $header.css("backgroundColor", "white");
+                $(".btn_w").css("display","none");
+                $(".btn_b").css("display","block");
+                $(".kr_box").css("color","black");
                 $(".btn_kr").css("border-color", "black");
                 $(".gnb").css("color", "black");
-                $(".btn_kr li > a").css("color", "black")
-                $(".m_menu").css("display", "block")
-                $(".btn_menu").css("display", "none")
+                $(".btn_kr li > a").css("color", "black");
+                $(".m_menu").css("display", "block");
+                $(".btn_menu").css("display", "none");
             } else {
-                $header.removeClass('on')
+                $header.removeClass('on');
                 $(".logo_w").css("display", "block");
                 $(".logo_b").css("display", "none");
-                $("header").css("backgroundColor", "");
+                $header.css("backgroundColor", "");
                 $(".gnb_h").css("color", "white");
                 $(".btn_w").css("display","block");
                 $(".btn_b").css("display","none");
                 $(".kr_box").css("color","white");
                 $(".btn_kr").css("border-color","white");
-                $(".btn_kr li > a").css("color", "white")
-                $(".m_menu").css("display", "none")
-                $(".btn_menu").css("display", "block")
+                $(".btn_kr li > a").css("color", "white");
+                $(".m_menu").css("display", "none");
+                $(".btn_menu").css("display", "block");
             }
         });
     });
-    });
+    
+
+    
     function showCont(cont_header) {
     if (cont_header === '환경') {
     $('.cont_box01').show();
