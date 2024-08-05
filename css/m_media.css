@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @media screen and (max-width: 1025px) {
     .btn_b {
         display: none;
@@ -42,17 +41,18 @@
         margin-top: 70px;
         display: none;
     }
+
     .searchArea.on {
         display: flex;
     }
-    
+
     .searchInner .search {
         position: relative;
         width: 60%;
         margin: 0 auto;
         text-align: center;
     }
-    
+
     .searchInner .search input {
         width: 100%;
         height: 56px;
@@ -60,55 +60,143 @@
         font-size: 18px;
         margin-top: 8%;
     }
-    
+
     .searchInner .search button {
         position: absolute;
-        top: 60px;
+        top: 63px;
         right: 10px;
         width: 28px;
         height: 28px;
         background: url(../img/hd_search_black.png) no-repeat center;
         border: none;
     }
-    
+
     .searchInner .search input:focus {
         outline: none;
     }
+
     .main_bg {
-        height: 35vh;
-        margin-bottom: 100px;
+        height: 25vh;
     }
 
     .main_bg .main_text {
-        position: absolute;
-        bottom: 6%;
         left: 5%;
+    }
+
+    .m_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .vid_img {
+        width: 460px;
+        height: 300px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .media_box {
+        position: relative;
+        display: inline-block;
+        margin: 30px 20px 20px 20px;
+    }
+
+    .media_box p {
+        font-size: 13px;
+    }
+
+    .media_box:last-child {
+        display: none;
+    }
+
+    .m_ft_box {
+        margin-top: 15%;
+        display: block;
+        position: relative;
     }
 }
 
 @media screen and (max-width: 913px) {
-    .main_bg {
-        height: 30vh;
-        margin-bottom: 100px;
+    .vid_img {
+        width: 410px;
+        height: 300px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-    footer {
-        height: 20vh;
-        box-sizing: border-box;
-        margin-bottom: 0;
+    .media_box {
+        position: relative;
+        display: inline-block;
+        margin: 30px 20px 20px 20px;
+    }
+
+    .media_box p {
+        width: 350px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width: 831px) {
+    .searchInner .search button {
+        position: absolute;
+        top: 55px;
+    }
+    .vid_img {
+        width: 360px;
+        height: 300px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .media_box {
+        position: relative;
+        display: inline-block;
+        margin: 30px 20px 20px 20px;
+    }
+
+    .media_box p {
+        width: 350px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .searchInner .search button {
+        position: absolute;
+        top: 50px;
+    }
+
+    .vid_img {
+        width: 340px;
+        height: 200px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .media_box p {
+        width: 340px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
 @media screen and (max-width: 431px) {
+
     /* main_bg */
     .main_bg {
-        height: 40vh;
+        height: 20vh;
         margin-bottom: 10px;
     }
 
     .main_bg .main_text {
         position: absolute;
-        bottom: 25%;
+        bottom: 3%;
         left: 3%;
     }
 
@@ -117,7 +205,7 @@
     }
 
     .location_con a {
-        font-size: 14px;
+        font-size: 12px;
         color: rgb(0, 0, 0, 0.5);
     }
 
@@ -126,65 +214,66 @@
         margin-bottom: 0;
     }
 
-    /* about_banner */
-    .about_banner {
-        display: none;
-    }
-
-    .m_about_banner {
-        background: url(../img/about_banner.png) no-repeat left/cover;
-        height: 65vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 5%;
-    }
-
-    .m_about_banner h3 {
-        font-size: 22px;
-        color: #fff;
-        text-align: center;
-        line-height: 1.53;
-        letter-spacing: -1.8px;
-    }
-
-    .cont_box {
+    /* content */
+    .content {
         display: block;
-        width: 100%;
-        margin-top: 100px;
+        padding: 0 10px;
+        margin-bottom: 50px;
     }
 
-    .cont {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 0 15px;
-        box-sizing: border-box;
+    .media_box {
+        position: relative;
+        display: inline-block;
+        margin: 0;
     }
 
-    .cont img {
-        width: 100%
-    }
-
-    .cont_text {
-        position: absolute;
-        bottom: 3%;
-        left: 5%;
-        line-height: 1;
-        padding: 5px;
-        box-sizing: border-box;
-    }
-
-    .cont_text p {
-        font-size: 15px;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 10px;
-    }
-
-    .cont_text span {
-        font-size: 13px;
+    .media_box p {
+        text-align: left;
         font-weight: 500;
+        font-size: 15px;
+        color: #000;
+        margin: 20px 0;
+        letter-spacing: -0.108px;
+    }
+
+    .vid_img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .media_box .btn {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        width: 70px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .close {
         color: #fff;
+        position: absolute;
+        top: 115px;
+        right: 21%;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 9999;
     }
 
     /* search */
@@ -229,22 +318,5 @@
     .searchInner .search input:focus {
         outline: none;
     }
-}
 
-@media screen and (max-width: 391px) {
-    h2 {
-        font-size: 22px;
-        margin-bottom: 0;
-        word-break: keep-all;
-    }
-}
-
-@media screen and (max-width: 361px) {
-    header {
-        padding: 20px 10px;
-    }
-
-    .main_bg {
-        height: 45vh;
-    }
 }

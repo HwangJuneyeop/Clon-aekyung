@@ -1,3 +1,4 @@
+
 /* header */
 $(function () {
     $('.gnb_area').on('mouseover focusin', function () {
@@ -17,116 +18,187 @@ $(function () {
             $('.gnb .sub').fadeOut(100);
             $(".gnb_area").css("transition", "all 0.7s");
             $(".gnb_area").css("width", "700px");
-            $('.gnb_area').css("height",'10px');
             $("header").css("backgroundColor", "");
         })
     });
-});
-
-$(function(){
-    $('.m_menu').on('click', function(){
-        $('.m_gnbArea').fadeIn();
-    })
-
-    $('.m_close').on('click', function(){
-        $('.m_gnbArea').fadeOut();
-    })
-});
-$(function(){
-    $('.acc-que').on('click', function(){
-        $(this).next('.acc-ans').stop().slideToggle(300);
-        //현재 클릭된 .acc-que에게 toggleClass(on)을 적용
-        //형제 요소는 on 제거
-        $(this).toggleClass('on').siblings().removeClass('on');
-        $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
-    })
 })
-
 
 
 /* serch */
- $(document).ready(function() {
-    $('.btn_b').click(function() {
+$(document).ready(function () {
+    $('.btn_b').click(function () {
         $('.btn_b').addClass('on');
         $('.btn_b').hide();
+        $('.m_menu').hide();
         $('.btn_close').show();
         $('.searchArea').fadeIn();
-       
+        $('.grayBox').fadeIn();
+        $('body').css('overflow', 'hidden');
     });
-    $('.btn_close').click(function(){
+
+    $('.btn_close').click(function () {
         $('.btn_b').removeClass('on');
         $('.btn_close').hide();
         $('.btn_b').show();
+        $('.m_menu').hide();
+        $('.searchArea').fadeOut();
+        $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
+    })
+
+    $('.m_btn_b').click(function () {
+        $('.m_btn_b').addClass('on');
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
+        $('.grayBox').fadeIn();
+        $('body').css('overflow', 'hidden');
+    });
+
+    $('.m_btn_close').click(function () {
+        $('.m_btn_b').removeClass('on');
+        $('.m_btn_close').hide();
+        $('.m_btn_b').show();
+        $('.m_menu').show();
+        $('.searchArea').fadeOut();
+        $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
+    })
+    $('.m_serch').click(function () {
+        $('.btn_b').addClass('on');
+        $('.btn_b').hide();
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.btn_close').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
+        $('.m_gnbArea').fadeOut();
+        $('.grayBox').fadeIn();
+        $('body').css('overflow', '');
+    });
+
+    $('.m_close').click(function () {
+        $('.btn_b').removeClass('on');
+        $('.btn_close').hide();
+        $('.btn_b').hide();
         $('.searchArea').fadeOut();
     })
 
-
-    /* kr_box ,fs_box*/
+    /* kr_box */
     $(document).ready(function() {
-        $('.kr_box').click(function() {
-            $('.btn_kr').toggleClass('on');
-            $('.btn_kr ul').slideToggle();
+        $('.btn_kr').click(function() {
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+            
+            $('.btn_fs').removeClass('on');
+            $('.btn_fs ul').slideUp();
         });
+    
         $('.btn_fs').click(function() {
-            $('.btn_fs').toggleClass('on')
-            $('.btn_fs ul').slideToggle();
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+            
+            $('.btn_kr').removeClass('on');
+            $('.btn_kr ul').slideUp();
         });
+    });
+    
+
+
+    /* 모바일 메뉴 */
+    $(function () {
+        $('.m_menu').on('click', function () {
+            $('.m_gnbArea').fadeIn();
+            $('.grayBox').fadeIn();
+        })
+
+        $('.m_close').on('click', function () {
+            $('.m_gnbArea').fadeOut();
+            $('.grayBox').fadeOut();
+        })
+    });
+
+    $(function () {
+        $('.acc-que').on('click', function () {
+            $(this).next('.acc-ans').stop().slideToggle(300);
+            $(this).toggleClass('on').siblings().removeClass('on');
+            $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
+        })
+    })
+});
+
+$(document).ready(function () {
+    $('.m_btn_kr').click(function () {
+        $('.m_btn_kr').toggleClass('on');
+        $('.m_btn_kr ul').slideToggle();
     });
 })
 
+$(function () {
+    $('.m_btn_fs').on('click', function () {
+        $('.m_btn_fs').toggleClass('on');
+        $('.m_btn_fs ul').fadeToggle();
+    })
+})
 
-document.addEventListener("DOMContentLoaded", function() {
-    var btnGreeting = document.querySelector('.btnGreeting');
-    var btnIntroduction = document.querySelector('.btnIntroduction');
-    var btnDesign = document.querySelector('.btnDesign');
-    var btnDevelopment =document.querySelector('.btnDevelopment');
+$(document).ready(function() {
+    var btnGreeting = $('.btnGreeting');
+    var btnIntroduction = $('.btnIntroduction');
+    var btnDesign = $('.btnDesign');
+    var btnDevelopment = $('.btnDevelopment');
 
-    btnGreeting.addEventListener('click', function() {
-        btnGreeting.classList.add('on');
-        btnIntroduction.classList.remove('on');
-        btnDesign.classList.remove('on');
-        btnDevelopment.classList.remove('on');
+    btnGreeting.on('click', function() {
+        btnGreeting.addClass('on');
+        btnIntroduction.removeClass('on');
+        btnDesign.removeClass('on');
+        btnDevelopment.removeClass('on');
     });
 
-    btnIntroduction.addEventListener('click', function() {
-        btnIntroduction.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnDesign.classList.remove('on');
-        btnDevelopment.classList.remove('on');
+    btnIntroduction.on('click', function() {
+        btnIntroduction.addClass('on');
+        btnGreeting.removeClass('on');
+        btnDesign.removeClass('on');
+        btnDevelopment.removeClass('on');
     });
-    btnDesign.addEventListener('click', function() {
-        btnDesign.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnIntroduction.classList.remove('on');
-        btnDevelopment.classList.remove('on');
-    });
-    btnDevelopment.addEventListener('click', function() {
-        btnDevelopment.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnIntroduction.classList.remove('on');
-        btnDesign.classList.remove('on');
-    });
-    var subCEO = document.querySelector('.subCEO');
-    var subVice = document.querySelector('.subVice');
-    var subGroup = document.querySelector('.subGroup');
 
-    subCEO.addEventListener('click', function() {
-        subCEO.classList.add('on');
-        subVice.classList.remove('on');
-        subGroup.classList.remove('on');
+    btnDesign.on('click', function() {
+        btnDesign.addClass('on');
+        btnGreeting.removeClass('on');
+        btnIntroduction.removeClass('on');
+        btnDevelopment.removeClass('on');
     });
-    subVice.addEventListener('click', function() {
-        subVice.classList.add('on');
-        subCEO.classList.remove('on');
-        subGroup.classList.remove('on');
+
+    btnDevelopment.on('click', function() {
+        btnDevelopment.addClass('on');
+        btnGreeting.removeClass('on');
+        btnIntroduction.removeClass('on');
+        btnDesign.removeClass('on');
     });
-    subGroup.addEventListener('click', function() {
-        subGroup.classList.add('on');
-        subCEO.classList.remove('on');
-        subVice.classList.remove('on');
+
+    var subCEO = $('.subCEO');
+    var subVice = $('.subVice');
+    var subGroup = $('.subGroup');
+
+    subCEO.on('click', function() {
+        subCEO.addClass('on');
+        subVice.removeClass('on');
+        subGroup.removeClass('on');
     });
-    
+
+    subVice.on('click', function() {
+        subVice.addClass('on');
+        subCEO.removeClass('on');
+        subGroup.removeClass('on');
+    });
+
+    subGroup.on('click', function() {
+        subGroup.addClass('on');
+        subCEO.removeClass('on');
+        subVice.removeClass('on');
+    });
 });
+
 function showSubKategorie(kategorie) {
     if (kategorie === '대표이사') {
         $('.CEO').show();
@@ -142,40 +214,3 @@ function showSubKategorie(kategorie) {
         $('.Group_Chairman').show();
     }
 }
-
-
- /* 모바일 메뉴 */
- $(function(){
-    $('.m_menu').on('click', function(){
-        $('.m_gnbArea').fadeIn();
-    })
-
-    $('.m_close').on('click', function(){
-        $('.m_gnbArea').fadeOut();
-    })
-});
-
-$(function(){
-    $('.acc-que').on('click', function(){
-        $(this).next('.acc-ans').stop().slideToggle(300);
-        //현재 클릭된 .acc-que에게 toggleClass(on)을 적용
-        //형제 요소는 on 제거
-        $(this).toggleClass('on').siblings().removeClass('on');
-        $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
-    })
-})
-
-
-$(document).ready(function() {
-$('.m_btn_kr').click(function() {
-    $('.m_btn_kr').toggleClass('on');
-    $('.m_btn_kr ul').slideToggle();
-});
-})
-
-$(function(){
-$('.m_btn_fs').on('click', function(){
-    $('.m_btn_fs').toggleClass('on');
-    $('.m_btn_fs ul').fadeToggle();
-})
-})

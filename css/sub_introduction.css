@@ -6,6 +6,7 @@ body {
     font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
 }
 
+
 /* main_bg */
 .main_bg {
     width: 100%;
@@ -118,6 +119,7 @@ h2 {
     border: none;
 }
 .searchInner .search input:focus {outline: none;}
+
 .grayBox {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;

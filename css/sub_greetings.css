@@ -5,6 +5,16 @@ body {
     color: #161616;
     font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
 }
+.grayBox {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+    z-index: 2;
+    display: none;
+    height: 280vh;
+}
+
 
 /* main_bg */
 .main_bg {

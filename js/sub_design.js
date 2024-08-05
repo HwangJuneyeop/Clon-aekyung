@@ -1,3 +1,4 @@
+
 /* header */
 $(function () {
     $('.gnb_area').on('mouseover focusin', function () {
@@ -17,160 +18,131 @@ $(function () {
             $('.gnb .sub').fadeOut(100);
             $(".gnb_area").css("transition", "all 0.7s");
             $(".gnb_area").css("width", "700px");
-            $('.gnb_area').css("height",'10px');
             $("header").css("backgroundColor", "");
         })
     });
 })
+
+
 /* serch */
-$(document).ready(function() {
-    $('.btn_b').click(function() {
+$(document).ready(function () {
+    $('.btn_b').click(function () {
         $('.btn_b').addClass('on');
         $('.btn_b').hide();
+        $('.m_menu').hide();
         $('.btn_close').show();
         $('.searchArea').fadeIn();
-       
+        $('.grayBox').fadeIn();
+        $('body').css('overflow', 'hidden');
     });
-    $('.btn_close').click(function(){
+
+    $('.btn_close').click(function () {
         $('.btn_b').removeClass('on');
         $('.btn_close').hide();
         $('.btn_b').show();
+        $('.m_menu').hide();
         $('.searchArea').fadeOut();
+        $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
     })
 
-
-    /* kr_box */
-    $(document).ready(function() {
-        $('.btn_kr').click(function() {
-            $('.btn_kr').toggleClass('on');
-            $('.btn_kr ul').slideToggle();
-        });
-
-        $('.btn_fs').click(function() {
-            $('.btn_fs').toggleClass('on')
-            $('.btn_fs ul').slideToggle();
-        });
-    });
-})
-
-/* history */
-function showSubKategorie(kategorie) {
-    if (kategorie === '현재') {
-        $('.today').show();
-        $('.past').hide();
-    } else if (kategorie === '2020') {
-        $('.today').hide();
-        $('.past').show();
-    }
-}
-
-/* main, sub link */
-document.addEventListener("DOMContentLoaded", function() {
-    var btnGreeting = document.querySelector('.btnGreeting');
-    var btnIntroduction = document.querySelector('.btnIntroduction');
-    var btnDesign = document.querySelector('.btnDesign');
-    var btnDevelopment =document.querySelector('.btnDevelopment');
-
-    btnGreeting.addEventListener('click', function() {
-        btnGreeting.classList.add('on');
-        btnIntroduction.classList.remove('on');
-        btnDesign.classList.remove('on');
-        btnDevelopment.classList.remove('on');
-    });
-
-    btnIntroduction.addEventListener('click', function() {
-        btnIntroduction.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnDesign.classList.remove('on');
-        btnDevelopment.classList.remove('on');
-    });
-    btnDesign.addEventListener('click', function() {
-        btnDesign.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnIntroduction.classList.remove('on');
-        btnDevelopment.classList.remove('on');
-    });
-    btnDevelopment.addEventListener('click', function() {
-        btnDevelopment.classList.add('on');
-        btnGreeting.classList.remove('on');
-        btnIntroduction.classList.remove('on');
-        btnDesign.classList.remove('on');
-    });
-    var subToday = document.querySelector('.sub_today');
-    var subPast = document.querySelector('.sub_past');
-
-    subToday.addEventListener('click', function() {
-        subToday.classList.add('on');
-        subPast.classList.remove('on');
-    });
-    subPast.addEventListener('click', function() {
-        subPast.classList.add('on');
-        subToday.classList.remove('on');
-    });
-    
-});
-/* 모바일메뉴 */
-$(function(){
-    $('.m_menu').on('click', function(){
-        $('.m_gnbArea').fadeIn();
+    $('.m_btn_b').click(function () {
+        $('.m_btn_b').addClass('on');
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
         $('.grayBox').fadeIn();
-    })
+        $('body').css('overflow', 'hidden');
+    });
 
-    $('.m_close').on('click', function(){
+    $('.m_btn_close').click(function () {
+        $('.m_btn_b').removeClass('on');
+        $('.m_btn_close').hide();
+        $('.m_btn_b').show();
+        $('.m_menu').show();
+        $('.searchArea').fadeOut();
+        $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
+    })
+    $('.m_serch').click(function () {
+        $('.btn_b').addClass('on');
+        $('.btn_b').hide();
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.btn_close').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
         $('.m_gnbArea').fadeOut();
-        $('.grayBox').fadeOut();
-    })
-});
-$(function(){
-    $('.acc-que').on('click', function(){
-        $(this).next('.acc-ans').stop().slideToggle(300);
-        //현재 클릭된 .acc-que에게 toggleClass(on)을 적용
-        //형제 요소는 on 제거
-        $(this).toggleClass('on').siblings().removeClass('on');
-        $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
-    })
-})
-
-/* serch */
- $(document).ready(function() {
-    $('.btn_b').click(function() {
-        $('.btn_b').addClass('on');
-        $('.btn_b').hide();
-        $('.btn_close').show();
-        $('.searchArea').fadeIn();
         $('.grayBox').fadeIn();
-       
+        $('body').css('overflow', 'hidden');
     });
-    $('.btn_close').click(function(){
+
+    $('.m_close').click(function () {
         $('.btn_b').removeClass('on');
         $('.btn_close').hide();
-        $('.btn_b').show();
+        $('.btn_b').hide();
         $('.searchArea').fadeOut();
-        $('.grayBox').fadeOut();
     })
 
     /* kr_box */
-    $(document).ready(function() {
-        $('.btn_kr').click(function() {
-            $('.btn_kr').toggleClass('on');
-            $('.btn_kr ul').slideToggle();
+    $(document).ready(function () {
+        $('.btn_kr').click(function () {
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+
+            $('.btn_fs').removeClass('on');
+            $('.btn_fs ul').slideUp();
         });
 
-        $('.btn_fs').click(function() {
-            $('.btn_fs').toggleClass('on')
-            $('.btn_fs ul').slideToggle();
+        $('.btn_fs').click(function () {
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+
+            $('.btn_kr').removeClass('on');
+            $('.btn_kr ul').slideUp();
         });
     });
-})
-$(document).ready(function() {
-    $('.m_btn_kr').click(function() {
+
+
+
+    /* 모바일 메뉴 */
+    $(function () {
+        $('.m_menu').on('click', function () {
+            $('.m_gnbArea').fadeIn();
+            $('.grayBox').fadeIn();
+        })
+
+        $('.m_close').on('click', function () {
+            $('.m_gnbArea').fadeOut();
+            $('.grayBox').fadeOut();
+        })
+        $('.m_close2').on('click', function () {
+            $('.m_gnbArea').fadeOut();
+            $('.grayBox').fadeOut();
+        })
+    });
+
+    $(function () {
+        $('.acc-que').on('click', function () {
+            $(this).next('.acc-ans').stop().slideToggle(300);
+            //현재 클릭된 .acc-que에게 toggleClass(on)을 적용
+            //형제 요소는 on 제거
+            $(this).toggleClass('on').siblings().removeClass('on');
+            $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
+        })
+    })
+});
+
+$(document).ready(function () {
+    $('.m_btn_kr').click(function () {
         $('.m_btn_kr').toggleClass('on');
         $('.m_btn_kr ul').slideToggle();
     });
 })
 
-$(function(){
-    $('.m_btn_fs').on('click', function(){
+$(function () {
+    $('.m_btn_fs').on('click', function () {
         $('.m_btn_fs').toggleClass('on');
         $('.m_btn_fs ul').fadeToggle();
     })

@@ -29,31 +29,80 @@ $(document).ready(function () {
     $('.btn_b').click(function () {
         $('.btn_b').addClass('on');
         $('.btn_b').hide();
+        $('.m_menu').hide();
         $('.btn_close').show();
         $('.searchArea').fadeIn();
         $('.grayBox').fadeIn();
-
+        $('body').css('overflow', 'hidden');
     });
+
     $('.btn_close').click(function () {
         $('.btn_b').removeClass('on');
         $('.btn_close').hide();
         $('.btn_b').show();
+        $('.m_menu').hide();
         $('.searchArea').fadeOut();
         $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
+    })
+
+    $('.m_btn_b').click(function () {
+        $('.m_btn_b').addClass('on');
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
+        $('.grayBox').fadeIn();
+        $('body').css('overflow', 'hidden');
+    });
+
+    $('.m_btn_close').click(function () {
+        $('.m_btn_b').removeClass('on');
+        $('.m_btn_close').hide();
+        $('.m_btn_b').show();
+        $('.m_menu').show();
+        $('.searchArea').fadeOut();
+        $('.grayBox').fadeOut();
+        $('body').css('overflow', '');
+    })
+    $('.m_serch').click(function () {
+        $('.btn_b').addClass('on');
+        $('.btn_b').hide();
+        $('.m_btn_b').hide();
+        $('.m_menu').hide();
+        $('.btn_close').hide();
+        $('.m_btn_close').show();
+        $('.searchArea').fadeIn();
+        $('.m_gnbArea').fadeOut();
+        $('.grayBox').fadeOut();
+    });
+
+    $('.m_close').click(function () {
+        $('.btn_b').removeClass('on');
+        $('.btn_close').hide();
+        $('.btn_b').hide();
+        $('.searchArea').fadeOut();
     })
 
     /* kr_box */
-    $(document).ready(function () {
-        $('.btn_kr').click(function () {
-            $('.btn_kr').toggleClass('on');
-            $('.btn_kr ul').slideToggle();
+    $(document).ready(function() {
+        $('.btn_kr').click(function() {
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+            
+            $('.btn_fs').removeClass('on');
+            $('.btn_fs ul').slideUp();
         });
-
-        $('.btn_fs').click(function () {
-            $('.btn_fs').toggleClass('on')
-            $('.btn_fs ul').slideToggle();
+    
+        $('.btn_fs').click(function() {
+            $(this).toggleClass('on');
+            $(this).find('ul').slideToggle();
+            
+            $('.btn_kr').removeClass('on');
+            $('.btn_kr ul').slideUp();
         });
     });
+    
 
 
     /* 모바일 메뉴 */
@@ -72,8 +121,6 @@ $(document).ready(function () {
     $(function () {
         $('.acc-que').on('click', function () {
             $(this).next('.acc-ans').stop().slideToggle(300);
-            //현재 클릭된 .acc-que에게 toggleClass(on)을 적용
-            //형제 요소는 on 제거
             $(this).toggleClass('on').siblings().removeClass('on');
             $(this).next('.acc-ans').siblings('.acc-ans').stop().slideUp(300)
         })
@@ -91,21 +138,5 @@ $(function () {
     $('.m_btn_fs').on('click', function () {
         $('.m_btn_fs').toggleClass('on');
         $('.m_btn_fs ul').fadeToggle();
-    })
-})
-$(document).ready(function () {
-    $('.m_serch').click(function () {
-        $('.btn_b').addClass('on');
-        $('.btn_b').hide();
-        $('.btn_close').show();
-        $('.searchArea').fadeIn();
-        $('.m_gnbArea').fadeOut();
-        $('.grayBox').fadeOut();
-    });
-    $('.m_close').click(function () {
-        $('.btn_b').removeClass('on');
-        $('.btn_close').hide();
-        $('.btn_b').show();
-        $('.searchArea').fadeOut();
     })
 })

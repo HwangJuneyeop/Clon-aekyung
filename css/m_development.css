@@ -4,30 +4,36 @@
     .btn_b {
         display: none;
         width: 20px;
-        margin-right:30px;
+        margin-right: 30px;
         margin-top: 5px;
     }
-    .m_btn_b{
+
+    .m_btn_b {
         display: block;
         width: 20px;
-        margin-right:30px;
+        margin-right: 30px;
         margin-top: 5px;
     }
+
     .m_btn_close {
         display: none;
-        width:20px;
+        width: 20px;
         margin-right: 30px;
         margin-top: 5px;
     }
-    .btn_close{
+
+    .btn_close {
         display: none;
-        width:20px;
+        width: 20px;
         margin-right: 30px;
         margin-top: 5px;
     }
-    .m_serch, .m_close {
+
+    .m_serch,
+    .m_close {
         display: block;
     }
+
     .searchArea {
         display: flex;
         justify-content: center;
@@ -42,17 +48,18 @@
         margin-top: 70px;
         display: none;
     }
+
     .searchArea.on {
         display: flex;
     }
-    
+
     .searchInner .search {
         position: relative;
         width: 60%;
         margin: 0 auto;
         text-align: center;
     }
-    
+
     .searchInner .search input {
         width: 100%;
         height: 56px;
@@ -60,7 +67,7 @@
         font-size: 18px;
         margin-top: 8%;
     }
-    
+
     .searchInner .search button {
         position: absolute;
         top: 60px;
@@ -70,45 +77,79 @@
         background: url(../img/hd_search_black.png) no-repeat center;
         border: none;
     }
-    
+
     .searchInner .search input:focus {
         outline: none;
     }
+
     .main_bg {
-        height: 35vh;
-        margin-bottom: 100px;
+        height: 25vh;
     }
 
     .main_bg .main_text {
-        position: absolute;
-        bottom: 6%;
         left: 5%;
     }
-}
 
-@media screen and (max-width: 913px) {
-    .main_bg {
-        height: 30vh;
-        margin-bottom: 100px;
+    .main_link>ul {
+        margin-left: 4%;
     }
 
-    footer {
-        height: 20vh;
+    .about_banner {
+        height: 35vh;
+    }
+
+    .cont_box {
+        padding: 0px 50px;
         box-sizing: border-box;
-        margin-bottom: 0;
+        margin-bottom: 10%;
+    }
+
+    .cont_text p {
+        font-size: 16px;
+    }
+
+    .cont_text span {
+        font-size: 13px;
     }
 }
 
-@media screen and (max-width: 431px) {
+@media screen and (max-width: 821px) {
+    .main_link>ul>li a {
+        width: 80px;
+    }
+
+    .cont_text {
+        line-height: 1;
+    }
+
+    .cont_text p {
+        font-size: 14px;
+    }
+
+    .cont_text span {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .searchInner .search button {
+        position: absolute;
+        top: 50px;
+        right: 5px;
+    }
+}
+
+@media screen and (max-width:431px) {
+
     /* main_bg */
     .main_bg {
-        height: 40vh;
+        height: 25vh;
         margin-bottom: 10px;
     }
 
     .main_bg .main_text {
         position: absolute;
-        bottom: 25%;
+        bottom: 3%;
         left: 3%;
     }
 
@@ -117,7 +158,7 @@
     }
 
     .location_con a {
-        font-size: 14px;
+        font-size: 12px;
         color: rgb(0, 0, 0, 0.5);
     }
 
@@ -126,39 +167,69 @@
         margin-bottom: 0;
     }
 
+    /* main_link */
+    .main_link {
+        margin: 60px 0 30px;
+    }
+
+    .main_link>ul {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .main_link>ul>li {
+        margin-right: 10px;
+    }
+
+    .main_link>ul>li:hover a {
+        color: #fff;
+        background-color: #000;
+    }
+
+    .main_link>ul>li.on a {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .main_link>ul>li a {
+        display: block;
+        width: 49px;
+        padding: 0 20px;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -1.5px;
+    }
+
     /* about_banner */
     .about_banner {
-        display: none;
-    }
-
-    .m_about_banner {
-        background: url(../img/about_banner.png) no-repeat left/cover;
-        height: 65vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background-position: 30%;
+        width: 100%;
+        height: 55vh;
         margin-bottom: 5%;
+        margin-top: 5%;
     }
 
-    .m_about_banner h3 {
-        font-size: 22px;
-        color: #fff;
-        text-align: center;
-        line-height: 1.53;
-        letter-spacing: -1.8px;
+    .about_banner h3 {
+        font-size: 20px;
+        letter-spacing: -2px;
     }
 
+    .about_banner h3>p {
+        font-size: 16px;
+    }
+
+    /* cont_box */
     .cont_box {
         display: block;
         width: 100%;
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     .cont {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 0 15px;
-        box-sizing: border-box;
+        position: relative;
+        width: 95%;
+        margin: 0 auto 30px;
     }
 
     .cont img {
@@ -167,24 +238,20 @@
 
     .cont_text {
         position: absolute;
-        bottom: 3%;
+        bottom: 13%;
         left: 5%;
         line-height: 1;
-        padding: 5px;
-        box-sizing: border-box;
     }
 
     .cont_text p {
-        font-size: 15px;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 10px;
+        font-size: 16px;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
     }
 
     .cont_text span {
-        font-size: 13px;
-        font-weight: 500;
-        color: #fff;
+        font-size: 14px;
+        letter-spacing: -1px;
     }
 
     /* search */
@@ -231,20 +298,32 @@
     }
 }
 
-@media screen and (max-width: 391px) {
-    h2 {
-        font-size: 22px;
-        margin-bottom: 0;
-        word-break: keep-all;
+@media screen and (max-width:413px) {
+    .main_link>ul {
+        margin-left: 0;
+    }
+
+    .cont_box {
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 10%;
     }
 }
 
-@media screen and (max-width: 361px) {
-    header {
-        padding: 20px 10px;
+@media screen and (max-width:376px) {
+    .main_link>ul>li a {
+        width: 39px;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: -1.5px;
     }
+}
 
-    .main_bg {
-        height: 45vh;
+@media screen and (max-width:361px) {
+    .main_link>ul>li a {
+        width: 39px;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: -1.5px;
     }
 }

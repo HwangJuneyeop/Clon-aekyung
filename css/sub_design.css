@@ -6,7 +6,6 @@ body {
     font-family: "NotoSansCJKkr", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", sans-serif !important;
 }
 
-
 /* search */
 .searchArea {
     display: flex;
@@ -273,6 +272,7 @@ h2 {
 }
 
 /* employment */
+
 .employment{
     display: flex;
     align-items: center;
@@ -284,6 +284,7 @@ h2 {
     margin-top: 8%;
 }
 .employment span {
+    display: block;
     background: #000;
     color: #fff;
     font-weight: 600;
@@ -322,6 +323,9 @@ h2 {
 .employment a:hover:after{
     width: 100%;
 }
+.m_arrow {
+    display: none;
+}
 .grayBox {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -329,260 +333,6 @@ h2 {
     opacity: 1;
     z-index: 2;
     display: none;
-    height: 280vh;
+    height: 400vh;
 }
 
-/* 모바일 */
-@media screen and (max-width: 431px){
-/* main_bg */
-.main_bg {
-    height: 20vh;
-    margin-bottom: 10px;
-}
-.main_bg .main_text {
-    position: absolute;
-    bottom: 3%; left:3%;
-}
-.location_con {
-    margin-bottom: 30px;
-}
-.location_con a {
-    font-size: 12px;
-    color: rgb(0,0,0,0.5);
-}
-h2 {
-    font-size: 26px;
-    margin-bottom: 0;
-}
-/* main_link */
-.main_link {
-    margin-bottom: 60px;
-}
-.main_link > ul{
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-.main_link > ul > li {
-    margin-right: 10px;
-}
-.main_link > ul > li:hover a {
-    color: #fff;
-    background-color: #000;
-}
-.main_link > ul > li.on a {
-    background-color: #000;
-    color:#fff;
-}
-.main_link > ul > li a {
-    display: block;
-    width: 49px;
-    padding: 0 20px;
-    line-height: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: -1.5px;
-}
-
-/* philosophy */
-.philosophy {
-    display: block;
-    background : #f8f8f8;
-    margin-top: 50px;
-    padding: 10px 5px;
-    box-sizing: border-box;
-}
-.top_title {
-    width: 90%;
-    margin: 10px auto;
-    border-bottom: 1px solid #000;
-}
-.top_title h3 {
-    margin-bottom: 30px;
-    letter-spacing: -0.168rem;
-    font-size: 20px;
-}
-.philosophy_title{
-    padding: 0;
-    text-align: center;
-    white-space : nowrap
-}
-.philosophy_title p {
-    font-size: 16px;
-    padding: 0 10px;
-    margin-top: 30px;
-}
-.philosophy_list ul {
-    display: block;
-    margin-left: 0;
-    line-height: 1;
-    margin-top: 50px;
-}
-.philosophy_list li > span {
-    font-size: 12px;
-    font-weight: 500;
-    margin-right: 15px;
-}
-.philosophy_list li {
-    width: 95%;
-    height: 40px;
-    margin:0 auto 20px;
-    border-bottom: 1px solid #ccc;
-    font-size: 13px;
-    font-weight: 500;
-    color: #000;
-}
-
-/* content */
-.content {
-    margin-top: 50px;
-}
-.cont_box {
-    display: block;
-    margin-bottom: 0;
-}
-.cont_text {
-    font-size: 18px;
-    padding:20px 10px;
-}
-.cont_text span{
-    font-size: 15px;
-}
-.cont_text h3 {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-.cont_text p {
-    font-size: 14px;
-}
-.cont_img {
-    text-align: center;
-}
-.cont_img img {
-    width: 95%;
-}
-.bottom_cont_box {
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* cont_history */
-.cont_history {
-    display: block;
-    margin-top: 10%;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-.left_history {
-    width: 100%;
-    margin-right: 0;
-}
-.left_history > span{
-    font-size: 16px;
-    letter-spacing: -1px;
-    
-}
-.left_history h3 {
-    font-size: 20px;
-    letter-spacing: -1px;
-    margin-top: 10px;
-    margin-bottom: 10%;
-}
-.sub_today, .sub_past{
-    display: none;
-}
-.right_history {
-    text-align: center;
-}
-.right_history img {
-    width: 48%;
-    margin-right: 0;
-}
-.right_history span {
-    font-size: 16px;
-    text-align: left;
-    letter-spacing: -1px;
-    margin-top: 20px;
-}
-.right_history p {
-    font-size: 14px;
-    letter-spacing: -2px;
-    margin-top: 10px;
-    text-align: left;
-}
-.employment{
-    position: relative;
-    display: block;
-    width:95%;
-    height: 130px;
-    margin: 50px auto 10%;
-}
-.employment span {
-    position: absolute;
-    top:50px; left:-7px;
-    display: block;
-    font-size: 12px;
-    color: #fff;
-    width:100px;
-    height: 30px;
-    line-height: 30px;
-}
-.employment p {
-    position: absolute;
-    bottom: 20px; left:10px;
-    width:75%;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -1px;
-}
-.employment a {
-    display: none;
-    position: relative;
-    margin-left:28%;
-    font-weight: 500;
-    color:#000;
-}
-.m_arrow_box {
-    position: absolute;
-    top: 10px; right:20px;
-    background: #fff;
-    border-radius: 50px;
-    width:30px;
-    height: 30px;
-}
-.m_arrow {
-    display: block;
-    position: absolute;
-    top:10px; right: 10px;
-}
-/* search */
-.searchArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 250px;
-    background: #fff;
-    z-index: 10;
-    margin-top: 70px;
-    display: none;
-}
-.searchInner .search {width: 85%;}
-.searchInner .search input {
-    width: 100%;
-    height: 56px; 
-    line-height: 56px;
-    border-bottom: 2px solid #000;
-    font-size: 14px;
-    margin-top: 70px;
-}
-.searchInner .search button {
-    position: absolute;
-    top: 80px; right: 0;
-    width: 32px; height: 32px;
-    background: url(../img/hd_search_black.png) no-repeat center;
-    border: none;
-}
-.searchInner .search input:focus {outline: none;}
-}
